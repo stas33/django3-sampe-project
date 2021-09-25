@@ -16,4 +16,4 @@ DATABASE_URL=sqlite:///./db.sqlite3
 ```bash
 python manage.py runserver
 ```
-hello
+hello2
