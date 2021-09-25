@@ -25,7 +25,9 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo "Hello!"
+                sh '''
+                echo "Test Deploy"
+                '''
                 /* sshagent (credentials: ['ssh-deployment-1']) {
 
                 sh '''
@@ -33,7 +35,7 @@ pipeline {
                     echo $WORKSPACE
                     ansible-playbook -i ~/workspace/ansible-project/hosts.yml -l deploymentservers ~/workspace/ansible-project/playbooks/check.yml
                     ''' */
-            }
+
             }
         }
     }
